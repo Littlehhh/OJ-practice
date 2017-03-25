@@ -30,8 +30,25 @@ int build( int L1, int R1, int L2, int R2){
 	return root;
 }
 
+int best,best_sum;
+
+void dfs(int u, int sum){
+	sum += u;
+	if(!lch[u] && !rch[u] ){
+		if(sum < best_sum || (sum == best_sum && u < best)) { best = u; best_sum = sum;}
+	}
+	if( lch[u] ) dfs( lch[u] , sum );
+	if( rch[u] ) dfs( rch[u] , sum );
+}
 int main()
 {
+	while( read_list(in_order) ){
+		read_list(post_order);
+		build(0,n-1,0,n-1);
+		best_sum = 1000000000;
+		dfs(post_order[n-1], 0);
+		cout << best << "\n";
+	} 
 
 	return 0;
 }
