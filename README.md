@@ -2,6 +2,7 @@ Some practice for algorithm competition on Online Judge
 ======
 ****
 ### Author: Hui Wang
+### E-mail: 1061659563@qq.com or wanghuichn@yahoo.com
 ****
 ## Contents
   * 蓝桥杯练习
